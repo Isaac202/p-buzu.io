@@ -160,3 +160,15 @@ body{
 .divisao_form{
     display: flex;
 }
+
+.videos{
+    width: 200px;
+    height: 100px;
+    border-radius: 10px;
+    background-color: #EA8F29;
+    margin: 1%;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

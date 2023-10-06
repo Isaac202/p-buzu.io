@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PITCH DE BUZU - DETALHES PITCH</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section class="body_section">
+        <div class="box">
+            <div class="header">
+                <img width="50" style="border-radius: 50%;" src="WhatsApp Image 2023-10-06 at 05.58.54.jpeg" alt="">
+                <div>
+                    <h4 id="nome">Karine Oliveira</h4>
+                    <span id="empresa">CEO do Wakanda Educação</span>
+                </div>
+                
+                <img src="notification.png" alt="">
+            </div>
+            <img src="Rectangle 36.png" alt="">
+            <br>
+            <br>
+            <a class="link_cadastro" href="">Avaliação de  Pitchs</a>
+        </div>
+        <div class="box">
+            <div class="videos"><h3>Video 01</h3></div>
+            <div class="videos"><h3>Video 02</h3></div>
+            <div class="videos"><h3>Video 03</h3></div>
+            
+        </div>
+        <div class="box">
+            <div>
+                <h3>Pitch Escolhido:</h3>
+                <select class="myButtoninput" type="text" placeholder="Selecionar Pitch">
+                    <option class="myButtoninput"value="">_______</option>
+                    <option class="myButtoninput"value="">Video 01</option>
+                    <option class="myButtoninput"value="">Video 02</option>
+                </select>
+            </div>
+            <div class="center">
+                <a id="divulgar" href="confir_pitch.html" class="myButtoninputsubmit">Confirmar</a>
+            </div>
+        </div>
+<br><br>
+        <footer 
+        style="background-color: #EA8F29;
+         width: 100%;
+         display: flex; 
+         align-items: center; 
+         justify-content: 
+         center;position: fixed;
+         bottom: 0;
+         left: 0;">
+            <img src="Group 31.png" alt="">
+        </footer>
+
+    </section>
+    <script>
+        // Recupere os valores do localStorage
+        const nome = localStorage.getItem('nome');
+        const descricao = localStorage.getItem('empresa');
+
+        const servico = localStorage.getItem('servico');
+        const descricao_serv = localStorage.getItem('descricao_serv');
+        const local = localStorage.getItem('local');
+        const hora = localStorage.getItem('hora');
+        // const local = localStorage.getItem('local');
+        // const horario = localStorage.getItem('horario');
+        
+        // Defina os valores dos campos de entrada com base nos valores do localStorage
+        document.getElementById('nome').innerHTML = nome;
+        document.getElementById('empresa').innerHTML = descricao;
+
+        document.getElementById('servico').innerHTML = servico;
+        document.getElementById('descricao_serv').innerHTML = descricao_serv;
+        document.getElementById('local').innerHTML = local;
+        document.getElementById('hora').innerHTML = hora;
+        // document.getElementById('local').value = local;
+        // document.getElementById('horario').value = horario;
+    </script>
+</body>
+</html>
