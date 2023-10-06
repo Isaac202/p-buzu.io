@@ -12,8 +12,8 @@
             <div class="header">
                 <img src="profile.png" alt="">
                 <div>
-                    <h4>Karine Oliveira</h4>
-                    <span>CEO do Wakanda Educação</span>
+                    <h4 id="nome">Karine Oliveira</h4>
+                    <span id="empresa">CEO do Wakanda Educação</span>
                 </div>
                 
                 <img src="notification.png" alt="">
@@ -66,6 +66,18 @@
         </footer>
 
     </section>
-    
+    <script>
+        // Recupere os valores do localStorage
+        const nome = localStorage.getItem('nome');
+        const descricao = localStorage.getItem('empresa');
+        // const local = localStorage.getItem('local');
+        // const horario = localStorage.getItem('horario');
+        
+        // Defina os valores dos campos de entrada com base nos valores do localStorage
+        document.getElementById('nome').innerHTML = nome;
+        document.getElementById('empresa').innerHTML = descricao;
+        // document.getElementById('local').value = local;
+        // document.getElementById('horario').value = horario;
+    </script>
 </body>
 </html>

@@ -11,21 +11,37 @@
         <img width="100px" src="logo.png" alt="">
         <a class="link_cadastro" href="">Cadastre-se como Empresa</a>
         <div class="box">
-            <input class="myButtoninput" type="text" placeholder="Nome Completo">
-            <input class="myButtoninput" type="text" placeholder="Empresa">
-            <input class="myButtoninput" type="text" placeholder="Email">
-            <input class="myButtoninput" type="text" placeholder="Senha">
-            <a href="create_pitch.html" class="myButtoninputsubmit">Cadastre-se</a>
+          <input class="myButtoninput" type="text" id="nome" placeholder="Nome Completo">
+          <input class="myButtoninput" type="text" id="empresa" placeholder="Empresa">
+          <input class="myButtoninput" type="text" id="email" placeholder="Email">
+          <input class="myButtoninput" type="text" id="senha" placeholder="Senha">
+          <a href="create_pitch.html" class="myButtoninputsubmit" id="cadastrar">Cadastre-se</a>
         </div>
         
         <div>
-            <p>Entre com...</p>
-            <div>
-                <a href=""><img src="Facebook.png" alt=""></a>
-                <a href=""><img src="Google.png" alt=""></a>
-                
-            </div>
+          <p>Entre com...</p>
+          <div>
+            <a href=""><img src="Facebook.png" alt=""></a>
+            <a href=""><img src="Google.png" alt=""></a>
+          </div>
         </div>
-    </section>
+      </section>
+    
+      <script>
+        // Evento de clique no link "Cadastre-se"
+        document.getElementById('cadastrar').addEventListener('click', function(event) {
+          // Captura os valores dos campos de entrada
+          const nome = document.getElementById('nome').value;
+          const empresa = document.getElementById('empresa').value;
+          const email = document.getElementById('email').value;
+          const senha = document.getElementById('senha').value;
+          
+          // Armazena os valores no localStorage
+          localStorage.setItem('nome', nome);
+          localStorage.setItem('empresa', empresa);
+          localStorage.setItem('email', email);
+          localStorage.setItem('senha', senha);
+        });
+      </script>
 </body>
 </html>
