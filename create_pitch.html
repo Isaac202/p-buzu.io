@@ -27,25 +27,25 @@
             
             <form action="">
                 <label for="">Nome do serviço/produto</label>
-                <input class="myButtoninput" type="text">
+                <input id="servico" class="myButtoninput" type="text">
                 <br>
                 <label for="">Descrição do Pitch</label>
                 <br>
-                <input style="height: 120px;" class="myButtoninput" type="text">
+                <input id="descricao" style="height: 120px;" class="myButtoninput" type="text">
                 <br>
                 <div class="divisao_form">
                     <div style="margin: 1%;">
                         <label for="">Local para Divulgação</label>
-                        <input class="myButtoninput" type="text">
+                        <input id="local" class="myButtoninput" type="text">
                     </div>
 
                     <div style="margin: 1%;">
                         <label for="">Horário de divulgação</label>
-                        <input class="myButtoninput" type="text">
+                        <input id="hora" class="myButtoninput" type="time">
                     </div>
                 </div>
                 <div class="center">
-                    <a href="confir_pitch.html" class="myButtoninputsubmit">Divulgar</a>
+                    <a id="divulgar" href="confir_pitch.html" class="myButtoninputsubmit">Divulgar</a>
                 </div>
                 
                 
@@ -78,6 +78,19 @@
         document.getElementById('empresa').innerHTML = descricao;
         // document.getElementById('local').value = local;
         // document.getElementById('horario').value = horario;
+        document.getElementById('divulgar').addEventListener('click', function(event) {
+          // Captura os valores dos campos de entrada
+          const servico = document.getElementById('servico').value;
+          const descricao_serv = document.getElementById('descricao').value;
+          const local = document.getElementById('local').value;
+          const hora = document.getElementById('hora').value;
+          
+          // Armazena os valores no localStorage
+          localStorage.setItem('servico', servico);
+          localStorage.setItem('descricao_serv', descricao);
+          localStorage.setItem('local', local);
+          localStorage.setItem('hora', hora);
+        });
     </script>
 </body>
 </html>
